@@ -11,4 +11,4 @@ fake_useragent == 0.1.11
 marshmallow == 2.18.0
 
 # src/modules/api.py: 5
-requests == 2.18.4
+requests >= 2.20.0
