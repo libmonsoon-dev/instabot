@@ -32,7 +32,7 @@ with env.prefixed('INSTABOT_'):
 
         requests_interval=env.float(
             name='REQUESTS_INTERVAL',
-            default=30
+            default=10
         ),
 
         ajax_header=env.str(
@@ -42,7 +42,7 @@ with env.prefixed('INSTABOT_'):
 
         random_intervals=env.bool(
             name='RANDOM_INTERVALS',
-            default=False
+            default=True
         ),
 
         on_error_interval=env.float(

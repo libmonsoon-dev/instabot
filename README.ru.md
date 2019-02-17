@@ -19,13 +19,13 @@ INSTABOT_MODE - На данный момент единственное дост
 
 INSTABOT_REQUESTS_LIMIT - количество запросов до завершения цикла (по умолчанию - 1000)
 
-INSTABOT_REQUESTS_INTERVAL - интервал между запросами в секундах (по умолчанию - 30)
+INSTABOT_REQUESTS_INTERVAL - интервал между запросами в секундах (по умолчанию - 10)
 
 INSTABOT_ON_ERROR_INTERVAL - длительность паузы в секундах в случае, если сервер вернул 4хх или 5хх статус код. (по умолчанию  - 120)
 
 INSTABOT_AJAX_HEADER
 
-INSTABOT_RANDOM_INTERVALS
+INSTABOT_RANDOM_INTERVALS - Испрользовать ли случайный интервал между запросами в пределах от INSTABOT_REQUESTS_INTERVAL / 2 до INSTABOT_REQUESTS_INTERVAL  * 1.5 (по умолчанию - True)
 
 ### Параметры пользователя
 
