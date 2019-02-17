@@ -16,7 +16,8 @@ class InstagramAPI(object):
 
     @debug_wrapper
     def __init__(self, *, username: str, password: str, query_hash: str, limit: int, mode: Mode, ajax_header: str,
-                 requests_interval: float, random_intervals: bool, session_file_path: str = 'session.pickle'):
+                 requests_interval: float, random_intervals: bool, on_error_interval: float,
+                 session_file_path: str = 'session.pickle'):
         self.username: str = username
         self.password: str = password
         self.query_hash: str = query_hash
@@ -24,6 +25,7 @@ class InstagramAPI(object):
         self.mode: str = mode
         self.requests_interval: float = requests_interval
         self.random_intervals: bool = random_intervals
+        self.on_error_interval = on_error_interval
         self.session_file_path: str = session_file_path
 
         self.send_requests_qty = 0
@@ -243,6 +245,7 @@ class InstagramAPI(object):
                 self.send_requests_qty += 1
             except HTTPError as error:
                 logging.warning(error)
+                sleep(self.on_error_interval)
             self.wait()
 
         return has_next_page, end_cursor

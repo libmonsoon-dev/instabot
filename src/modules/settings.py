@@ -43,6 +43,11 @@ with env.prefixed('INSTABOT_'):
         random_intervals=env.bool(
             name='RANDOM_INTERVALS',
             default=False
+        ),
+
+        on_error_interval=env.float(
+            name='ON_ERROR_INTERVAL',
+            default=120
         )
     )
 
